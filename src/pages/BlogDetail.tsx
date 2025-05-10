@@ -8,10 +8,12 @@ import ShareSection from "@/components/ShareSection";
 import CommentSection from "@/components/CommentSection";
 import RelatedBlogs from "@/components/RelatedBlogs";
 import { Clock, Calendar } from "lucide-react";
+import { useLanguage, getBodyFont } from "@/context/LanguageContext";
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { language, t } = useLanguage();
   
   const post = blogPosts.find(post => post.id === id);
   
@@ -27,6 +29,7 @@ const BlogDetail = () => {
   if (!post) return null;
   
   const relatedPosts = getRelatedPosts(post.id, post.category);
+  const bodyFont = getBodyFont(language);
   
   return (
     <div className="min-h-screen">
@@ -66,7 +69,7 @@ const BlogDetail = () => {
                   )}
                 </div>
                 
-                <article className="font-minion text-lg leading-relaxed blog-content">
+                <article className={`${bodyFont} text-lg leading-relaxed blog-content`}>
                   <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </article>
                 
@@ -84,7 +87,7 @@ const BlogDetail = () => {
       </main>
       <footer className="border-t border-border py-6">
         <div className="container text-center font-minion text-blog-neutral">
-          © {new Date().getFullYear()} Folklore Blog. All rights reserved.
+          © {new Date().getFullYear()} Folklore Blog. {t("footer.rights")}
         </div>
       </footer>
     </div>

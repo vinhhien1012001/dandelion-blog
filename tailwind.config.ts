@@ -72,7 +72,8 @@ export default {
 			},
 			fontFamily: {
 				'minion': ['"Minion Pro"', 'serif'],
-				'folklore': ['"IM Fell English"', 'serif'] // Using "IM Fell English" as our Taylor Swift folklore-inspired font
+				'folklore': ['"IM Fell English"', 'serif'], // Using "IM Fell English" as our Taylor Swift folklore-inspired font
+				'inter': ['Inter', 'sans-serif'], // Adding Inter font for Vietnamese
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
