@@ -17,8 +17,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="font-minion hover:text-blog-dark transition-colors">
-                About
+              <Link to="/subscribe" className="font-minion hover:text-blog-dark transition-colors">
+                Subscribe
+              </Link>
+            </li>
+            <li>
+              <Link to="/donate" className="font-minion hover:text-blog-dark transition-colors">
+                Support
               </Link>
             </li>
           </ul>
