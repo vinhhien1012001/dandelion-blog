@@ -9,6 +9,7 @@ import CommentSection from "@/components/CommentSection";
 import RelatedBlogs from "@/components/RelatedBlogs";
 import { Clock, Calendar } from "lucide-react";
 import { useLanguage, getBodyFont } from "@/context/LanguageContext";
+import Footer from "@/components/Footer";
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -36,7 +37,8 @@ const BlogDetail = () => {
       <Navbar />
       <main className="py-12">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          {/* Max width 4xl here */}
+          <div className="mx-auto">
             <div className="mb-8">
               <span className="inline-block px-3 py-1 bg-blog-soft-gray text-blog-dark font-minion text-sm mb-4">
                 {post.category}
@@ -78,18 +80,14 @@ const BlogDetail = () => {
                 <RelatedBlogs posts={relatedPosts} />
               </div>
               
-              <aside className="lg:w-1/3">
+              <aside className="hidden sm:block lg:w-1/3">
                 <ProgressBar totalWords={post.wordCount} />
               </aside>
             </div>
           </div>
         </div>
       </main>
-      <footer className="border-t border-border py-6">
-        <div className="container text-center font-minion text-blog-neutral">
-          © {new Date().getFullYear()} Folklore Blog. {t("footer.rights")}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

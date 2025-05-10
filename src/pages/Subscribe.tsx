@@ -16,6 +16,7 @@ import {
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Footer from "@/components/Footer";
 
 const subscribeSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -47,7 +48,7 @@ const Subscribe = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen">
       <Navbar />
       <main className="py-12">
         <div className="container max-w-2xl">
@@ -108,11 +109,7 @@ const Subscribe = () => {
           </div>
         </div>
       </main>
-      <footer className="border-t border-border py-6">
-        <div className="container text-center font-minion text-blog-neutral">
-          © {new Date().getFullYear()} Folklore Blog. All rights reserved.
-        </div>
-      </footer>
+      <Footer className="absolute bottom-0 w-full"/>
     </div>
   );
 };

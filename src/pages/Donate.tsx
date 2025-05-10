@@ -6,6 +6,7 @@ import { Coffee } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import Footer from "@/components/Footer";
 
 const Donate = () => {
   const [amount, setAmount] = useState("5");
@@ -24,7 +25,7 @@ const Donate = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen">
       <Navbar />
       <main className="py-12">
         <div className="container max-w-2xl">
@@ -88,11 +89,7 @@ const Donate = () => {
           </div>
         </div>
       </main>
-      <footer className="border-t border-border py-6">
-        <div className="container text-center font-minion text-blog-neutral">
-          © {new Date().getFullYear()} Folklore Blog. All rights reserved.
-        </div>
-      </footer>
+      <Footer className="absolute bottom-0 w-full"/>
     </div>
   );
 };

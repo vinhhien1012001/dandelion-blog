@@ -39,11 +39,11 @@ export const blogPosts: BlogPost[] = [
       
       <p>Perhaps that's the greatest skill we can develop: not the ability to achieve more or acquire more, but to notice more of what's already here.</p>
     `,
-    author: "Emma Wilson",
+    author: "Tu Anh",
     category: "Mindfulness",
     readTime: 4,
     wordCount: 320,
-    image: "/placeholder.svg"
+    image: "/blog-1.jpeg"
   },
   {
     id: "2",
@@ -69,11 +69,11 @@ export const blogPosts: BlogPost[] = [
       
       <p>So next time you reach for something to read, consider what experience you want—not just what content. Sometimes the medium truly is part of the message.</p>
     `,
-    author: "Emma Wilson",
+    author: "Tu Anh",
     category: "Literature",
     readTime: 3,
     wordCount: 280,
-    image: "/placeholder.svg"
+    image: "/blog-2.png"
   },
   {
     id: "3",
@@ -103,11 +103,11 @@ export const blogPosts: BlogPost[] = [
       
       <p>Perhaps most importantly, living with greater seasonal awareness reconnects us to the world beyond our screens and climate-controlled environments. It reminds us that we remain part of natural cycles larger than ourselves—a humbling and comforting truth in uncertain times.</p>
     `,
-    author: "Emma Wilson",
+    author: "Tu Anh",
     category: "Wellness",
     readTime: 5,
     wordCount: 350,
-    image: "/placeholder.svg"
+    image: "/blog-3.jpeg"
   },
   {
     id: "4",
@@ -139,11 +139,11 @@ export const blogPosts: BlogPost[] = [
       
       <p>Whatever method you choose, shifting from obligation to opportunity changes everything about gifting. It becomes less about consumption and more about connection—which is what gifts were meant to foster all along.</p>
     `,
-    author: "Emma Wilson",
+    author: "Tu Anh",
     category: "Relationships",
     readTime: 4,
     wordCount: 370,
-    image: "/placeholder.svg"
+    image: "/blog-4.jpg"
   }
 ];
 

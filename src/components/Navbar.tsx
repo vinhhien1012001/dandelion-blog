@@ -11,7 +11,7 @@ const Navbar = () => {
     <header className="border-b border-border">
       <div className="container py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-folklore tracking-wide">
-          Folklore Blog
+          The Wild Dandelion
         </Link>
         <nav className="flex items-center gap-4">
           <ul className="flex gap-8">
