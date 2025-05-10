@@ -71,7 +71,7 @@ const BlogDetail = () => {
                   )}
                 </div>
                 
-                <article className={`${bodyFont} text-lg leading-relaxed blog-content`}>
+                <article className={`${bodyFont} text-[21px] leading-[2] blog-content`}>
                   <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </article>
                 
