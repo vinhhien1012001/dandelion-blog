@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -12,11 +11,11 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <Button 
-      variant="ghost" 
+    <Button
+      variant="ghost"
       size="icon"
-      onClick={toggleLanguage} 
-      className="hover:bg-blog-soft-gray rounded-full"
+      onClick={toggleLanguage}
+      className="hover:underline px-[30px] py-[10px]"
     >
       <Globe className="h-5 w-5" />
       <span className="ml-1 text-xs font-bold">{language.toUpperCase()}</span>

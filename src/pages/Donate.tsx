@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -11,12 +10,12 @@ import Footer from "@/components/Footer";
 const Donate = () => {
   const [amount, setAmount] = useState("5");
   const [isProcessing, setIsProcessing] = useState(false);
-  
+
   const presetAmounts = ["5", "10", "15", "25", "50"];
 
   const handleDonate = () => {
     setIsProcessing(true);
-    
+
     // Simulate payment processing
     setTimeout(() => {
       toast.success(`Thank you for your $${amount} donation!`);
@@ -25,15 +24,18 @@ const Donate = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="py-12">
+      <main className="py-12 flex-1">
         <div className="container max-w-2xl">
           <div className="text-center mb-12">
-            <h1 className="font-folklore text-4xl md:text-5xl mb-6">Buy Me a Coffee</h1>
+            <h1 className="font-folklore text-4xl md:text-5xl mb-6">
+              Buy Me a Coffee
+            </h1>
             <p className="font-minion text-lg mb-8">
-              If you enjoy my blog and would like to support my work, consider buying me a coffee. 
-              Your donation helps keep this blog running and ad-free.
+              If you enjoy my blog and would like to support my work, consider
+              buying me a coffee. Your donation helps keep this blog running and
+              ad-free.
             </p>
             <Coffee size={48} className="mx-auto text-blog-dark" />
           </div>
@@ -51,7 +53,7 @@ const Donate = () => {
                     ${preset}
                   </Button>
                 ))}
-                
+
                 <div className="flex items-center w-full max-w-[120px]">
                   <span className="mr-1">$</span>
                   <Input
@@ -64,32 +66,34 @@ const Donate = () => {
                   />
                 </div>
               </div>
-              
-              <Button 
-                onClick={handleDonate} 
+
+              <Button
+                onClick={handleDonate}
                 disabled={isProcessing || !amount || Number(amount) < 1}
                 className="w-full"
               >
                 <Coffee className="mr-2" />
                 {isProcessing ? "Processing..." : `Donate $${amount}`}
               </Button>
-              
+
               <p className="text-center text-blog-neutral mt-4 text-sm font-minion">
                 All transactions are secure. Your support means the world to me!
               </p>
             </CardContent>
           </Card>
-          
+
           <div className="mt-12 text-center">
-            <h2 className="font-folklore text-2xl mb-4">Other Ways to Support</h2>
+            <h2 className="font-folklore text-2xl mb-4">
+              Other Ways to Support
+            </h2>
             <p className="font-minion text-lg">
-              Share my articles, follow me on social media, or simply send a kind message. 
-              Your support in any form is greatly appreciated!
+              Share my articles, follow me on social media, or simply send a
+              kind message. Your support in any form is greatly appreciated!
             </p>
           </div>
         </div>
       </main>
-      <Footer className="absolute bottom-0 w-full"/>
+      <Footer />
     </div>
   );
 };
